@@ -1,0 +1,33 @@
+{
+  "purpose": "sanitized example of a selective RAG/tool lookup request",
+  "run_id": "dev-run-example-001",
+  "finding": {
+    "severity": "warning",
+    "source": "loki-cluster-summary",
+    "service_hint": "reverse-proxy",
+    "exact_error_tokens": [
+      "TLSV1_ALERT_INTERNAL_ERROR",
+      "client SSL handshake failed"
+    ],
+    "question": "Is this error already documented in the service runbook, and what action should be recommended?"
+  },
+  "retrieval_plan": [
+    {
+      "tool": "knowledge_base_semantic_search",
+      "query": "reverse proxy TLS handshake internal error troubleshooting homelab"
+    },
+    {
+      "tool": "knowledge_base_exact_search",
+      "query": "TLSV1_ALERT_INTERNAL_ERROR"
+    },
+    {
+      "tool": "case_memory_search",
+      "query": "reverse-proxy TLS handshake recurring warning"
+    }
+  ],
+  "constraints": [
+    "Use deterministic telemetry as primary evidence.",
+    "Do not escalate severity unless supported by outage or security evidence.",
+    "If documentation is missing and recurrence threshold is met, prepare a change candidate only."
+  ]
+}

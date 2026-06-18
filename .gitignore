@@ -1,0 +1,25 @@
+# System and temporary files
+.DS_Store
+Thumbs.db
+
+# Python & Environment caches
+__pycache__/
+*.pyc
+.env
+
+# Raw and sensitive configurations
+*.xml
+*.json
+!snippets/*.json
+!docs/**/*.json
+!demo/**/*.json
+!demo/**/*.jsonl
+
+# Local telemetry or logs
+*.log
+N8N_data_import/raw/
+DEV/
+
+# Private working notes
+private/
+local/

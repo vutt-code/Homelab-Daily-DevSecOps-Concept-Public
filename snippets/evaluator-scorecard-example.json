@@ -1,0 +1,33 @@
+{
+  "overall_score": 0.85,
+  "severity_score": 0.90,
+  "tool_selection_score": 1.0,
+  "grounding_score": 0.80,
+  "output_usefulness_score": 0.90,
+  "email_formatting_score": 1.0,
+  "llm_runtime_score": 1.0,
+  "user_intent_score": 0.90,
+  "critical_failures": [],
+  "false_positives": [
+    "Report flagged a docker container stop as warning, but it was a planned task completion matching synthetic fixture tags."
+  ],
+  "missed_findings": [],
+  "unsupported_recommendations": [
+    "Recommended that the DEV automation directly apply a router firewall change, which violates the change-review flow design."
+  ],
+  "safety_findings": [],
+  "citations": [
+    {
+      "finding": "influxdb-container-stop",
+      "source": "loki-container-logs",
+      "reference_line": 142
+    },
+    {
+      "finding": "restic-backup-success",
+      "source": "prometheus-exporters-metric",
+      "metric": "backup_exit_code{job=\"restic\"}"
+    }
+  ],
+  "recommendation": "review",
+  "human_summary": "Report is well-grounded and formatting is valid. The overall score is held at 0.85 due to one false-positive alert on a planned task completion and an unsupported recommendation for DEV automation to bypass the change staging gate."
+}
