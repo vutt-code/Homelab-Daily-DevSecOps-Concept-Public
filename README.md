@@ -99,6 +99,4 @@ daily-devsecops-concept/
 
 ## Publication status
 
-Status: **ready for manual GitHub publishing**.
-
-Before publishing, complete the checklist in [`PUBLISHING.md`](PUBLISHING.md) and review [`docs/redaction-guide.md`](docs/redaction-guide.md). This repository is shared as source-available portfolio/reference material; see [`USAGE-NOTICE.md`](USAGE-NOTICE.md).
+Status: **Published**.
