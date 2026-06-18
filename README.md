@@ -42,7 +42,6 @@ This package uses **C4 Lite + ADRs + hands-on walkthrough**:
 4. **ADRs**: short records for key architecture decisions.
 5. **Walkthrough**: a concrete end-to-end story for readers who want implementation intuition.
 
-The diagrams are maintained with the project `c4-diagram` skill conventions. The structured C4 source note is [`docs/System - Daily DevSecOps Concept.md`](docs/System%20-%20Daily%20DevSecOps%20Concept.md).
 
 ## Suggested reading order
 
